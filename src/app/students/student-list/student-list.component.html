@@ -1,0 +1,48 @@
+<h2>Students list</h2>
+
+<button class="btn draw-border" routerLink="/students/student">Create Student</button>
+
+
+
+<div class="student-search">
+  <input type='text' [(ngModel)]="searchQuery" (ngModelChange)="search()" />
+</div>
+
+
+
+
+<!-- <ol> -->
+<!--    <li *ngFor='let student of studentsToShow'> -->
+<!--      <app-student-list-item [student]="student"></app-student-list-item> -->
+<!--    </li> -->
+<!-- </ol> -->
+
+
+<table padding>
+  <tr>
+    <th >Student's id</th>
+    <th >Student's first name</th>
+    <th >Student's last name</th>
+    <th>Student's score</th>
+    <th>Course</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor='let student of studentsToShow'  >
+    <td  (click)="editStudent(student)">{{student.id}}</td>
+    <td >{{student.firstName}}</td>
+    <td >{{student.lastName}}</td>
+    <td [ngClass]="{'red': student.score < 8}">{{student.score}}</td>
+    <td *ngFor="let course of student.courses">Course {{course.name}}</td>
+    <!-- <button class="btnDel"  type='button' (click)='deleteStudent(student.id)'>Delete Student</button> -->
+    <button   type='button' (click)='deleteStudent(student.id)'  class="btn btn-danger">
+      <i class="glyphicon glyphicon-trash"></i> Delete
+    </button>
+  </tr>
+</table>
+
+<!-- <div class="create-student"> -->
+<!--   <input type="text" [(ngModel)]="studentToCreate.firstName"> -->
+<!--   <input type="number" [(ngModel)]="studentToCreate.score"> -->
+<!--   <button (click)="createStudent()" [className]="'submit'">Submit</button> -->
+<!-- </div> -->
+

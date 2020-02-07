@@ -1,0 +1,68 @@
+
+
+  /*-- end reset --*/
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /*-- main --*/
+  .main-w3layouts {
+    padding: 3em 0 1em;
+  }
+  
+  .main-agileinfo {
+    width: 35%;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0.18);
+    background-size: cover;
+  }
+  
+  .agileits-top {
+    padding: 3em;
+    background-color: #76b852;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 0.9em;
+    color: black;
+    font-weight: 100;
+    width: 94.5%;
+    display: block;
+    border: none;
+    padding: 0.8em;
+
+  }
+  
+  input.email, input.text.w3lpass {
+    margin: 2em 0;
+  }
+  
+  .text:focus, .text:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+  }
+  
+
+  input[type="submit"] {
+    font-size: .9em;
+    color: black;
+    background: white;
+    outline: none;
+    border: 1px solid #76b852;
+    cursor: pointer;
+    padding: 0.9em;
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 2em 0;
+    letter-spacing: 4px;
+  }
+ 
+  

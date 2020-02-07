@@ -1,0 +1,23 @@
+.login-form {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+  
+    .form-group {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-bottom: 1.5rem;
+  
+      label {
+        margin-bottom: 0.5rem;
+      }
+  
+      input {
+        padding: 0.5rem 0.5rem;
+      }
+    }
+  }
+      

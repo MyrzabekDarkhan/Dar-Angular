@@ -1,0 +1,10 @@
+<div class='create-faculty'>
+    <form [formGroup]="form" (ngSubmit)='createFaculty()'>
+      <div class="form-group">
+        <input type="text" formControlName='name' class="formStyle" placeholder='Faculty name'>
+        <div *ngIf="submitted && form.get('name').errors?.required">This field is required</div>
+      </div>
+      
+      <button class="formButton" type='submit'>Submit</button>
+    </form>
+  </div>

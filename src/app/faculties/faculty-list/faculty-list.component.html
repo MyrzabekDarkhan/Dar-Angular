@@ -1,0 +1,27 @@
+<h2>list of Faculties</h2>
+
+
+<button class="btn draw-border" routerLink="/faculties/faculty">Create Faculty</button>
+
+
+<div class="faculty-search">
+  
+        <input id="search" type="search" name="search" type='text' [(ngModel)]="searchQuery" (ngModelChange)="search()">
+
+
+</div>
+
+<table padding>
+    <tr>
+      <th >Faculty's name</th>
+      <th>Action</th>
+    </tr>
+
+    <tr *ngFor='let faculty of facultiesToShow'  (click)="editFaculty(faculty)">
+      <td >{{faculty.name}}</td>
+      <!-- <button class="btnDel"  type='button' (click)='deleteFaculty(faculty.id)'>Delete Faculty</button> -->
+      <button   type='button' (click)='deleteFaculty(faculty.id)'  class="btn btn-danger">
+        <i class="glyphicon glyphicon-trash"></i> Delete
+      </button>
+    </tr>
+  </table>
